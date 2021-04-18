@@ -24,6 +24,15 @@ button:focus {
           box-shadow: none !important;
 }
 
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
 body {
   bottom: 0;
   padding: 0;
@@ -38,6 +47,7 @@ body {
   background: #272A36;
   -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
+  z-index: 1;
 }
 
 .navbar .navbar-brand {
@@ -55,6 +65,12 @@ body {
 
 .navbar .navbar-toggler .navbar-toggler-icon {
   color: white;
+}
+
+@media (max-width: 768px) {
+  .navbar .navbar-toggler .navbar-toggler-icon {
+    cursor: pointer !important;
+  }
 }
 
 @media (max-width: 576px) {
@@ -86,7 +102,7 @@ body {
 }
 
 .navbar .navbar-nav .nav-item .btn_cv:hover {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .navbar .navbar-nav .nav-item .nav-link {
@@ -102,7 +118,7 @@ body {
 }
 
 .navbar .navbar-nav .nav-item .nav-link:hover {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .navbar .navbar-nav .nav-item .actlink {
@@ -119,7 +135,7 @@ body {
   }
 }
 
-.header .container .row {
+.header .container-sm .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -128,49 +144,55 @@ body {
           align-items: center;
 }
 
-.header .container .row .aboutMe h3 {
+.header .container-sm .row .aboutMe h3 {
   font-size: 2.7em;
   letter-spacing: -1px;
 }
 
 @media (max-width: 768px) {
-  .header .container .row .aboutMe h3 {
-    font-size: 3rem;
+  .header .container-sm .row .aboutMe h3 {
+    font-size: 2.5rem;
     line-height: 3rem;
     letter-spacing: -0.5px;
   }
 }
 
 @media (max-width: 576px) {
-  .header .container .row .aboutMe h3 {
-    font-size: 2rem;
-    line-height: 2rem;
+  .header .container-sm .row .aboutMe h3 {
+    font-size: 2.3rem;
+    line-height: 2.5rem;
     letter-spacing: -0.5px;
   }
 }
 
-.header .container .row .aboutMe p {
+.header .container-sm .row .aboutMe p {
   color: #646C77;
 }
 
-.header .container .row .aboutMe .title {
+.header .container-sm .row .aboutMe .title {
   font-size: 16px;
   font-weight: 450;
 }
 
-.header .container .row .aboutMe .desc {
+.header .container-sm .row .aboutMe .desc {
   font-size: 18px;
   font-weight: 450;
 }
 
-.header .container .row .aboutMe .ctas {
+@media (max-width: 768px) {
+  .header .container-sm .row .aboutMe .desc {
+    font-size: 16px;
+  }
+}
+
+.header .container-sm .row .aboutMe .ctas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 @media (max-width: 768px) {
-  .header .container .row .aboutMe .ctas {
+  .header .container-sm .row .aboutMe .ctas {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -178,7 +200,7 @@ body {
   }
 }
 
-.header .container .row .aboutMe .ctas .ctaWork {
+.header .container-sm .row .aboutMe .ctas .ctaWork {
   background: #5436CC;
   padding: 0.75rem 1rem;
   border-radius: 10px;
@@ -187,7 +209,7 @@ body {
   transition: 0.25s ease-in-out;
 }
 
-.header .container .row .aboutMe .ctas .ctaWork span {
+.header .container-sm .row .aboutMe .ctas .ctaWork span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -199,37 +221,32 @@ body {
           justify-content: center;
 }
 
-.header .container .row .aboutMe .ctas .ctaWork .icon {
+.header .container-sm .row .aboutMe .ctas .ctaWork .icon {
   -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
 
-@media (max-width: 768px) {
-  .header .container .row .aboutMe .ctas .ctaWork .icon {
-    display: none;
-  }
-}
-
-.header .container .row .aboutMe .ctas .ctaWork:hover {
-  opacity: 0.8;
+.header .container-sm .row .aboutMe .ctas .ctaWork:hover {
+  -webkit-box-shadow: 0px 0px 10px rgba(84, 54, 204, 0.4);
+          box-shadow: 0px 0px 10px rgba(84, 54, 204, 0.4);
 }
 
 @media (max-width: 576px) {
-  .header .container .row .aboutMe .ctas .ctaWork {
+  .header .container-sm .row .aboutMe .ctas .ctaWork {
     padding: 1rem 2rem;
     font-size: 1rem;
   }
 }
 
 @media (max-width: 768px) {
-  .header .container .row .aboutMe .ctas .ctaWork {
+  .header .container-sm .row .aboutMe .ctas .ctaWork {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
 }
 
-.header .container .row .aboutMe .ctas .ctaContact {
+.header .container-sm .row .aboutMe .ctas .ctaContact {
   padding: 0.75rem;
   border-radius: 10px;
   border: 1px solid #646C77;
@@ -237,38 +254,44 @@ body {
   transition: 0.25s ease-in-out;
 }
 
-.header .container .row .aboutMe .ctas .ctaContact:hover {
+.header .container-sm .row .aboutMe .ctas .ctaContact:hover {
   opacity: 0.7;
 }
 
 @media (max-width: 576px) {
-  .header .container .row .aboutMe .ctas .ctaContact {
+  .header .container-sm .row .aboutMe .ctas .ctaContact {
     padding: 1rem 2rem;
     font-size: 1rem;
   }
 }
 
-.header .container .row .NameHead .title {
+.header .container-sm .row .NameHead .title {
   font-size: 4rem;
   font-weight: bold;
 }
 
+@media (max-width: 768px) {
+  .header .container-sm .row .NameHead .title {
+    font-size: 2.3rem;
+  }
+}
+
 @media (max-width: 576px) {
-  .header .container .row .NameHead .title {
+  .header .container-sm .row .NameHead .title {
     font-size: 2.5rem;
   }
 }
 
-.header .container .row .NameHead .title span {
+.header .container-sm .row .NameHead .title span {
   color: #5436CC;
 }
 
-.header .container .row .col-12 {
+.header .container-sm .row .col-12 {
   position: relative;
 }
 
 @media (max-width: 576px) {
-  .header .container .row .col-12 {
+  .header .container-sm .row .col-12 {
     padding: 0 1rem 2rem 1rem;
   }
 }
@@ -276,5 +299,40 @@ body {
 .work {
   background: #222530;
   padding: 10rem 0rem;
+}
+
+#sidebar {
+  z-index: 4;
+  min-width: 250px;
+  margin-left: -250px;
+  max-width: 250px;
+  height: 100%;
+  background: #2C303F;
+  color: #fff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#sidebar.active {
+  margin-left: 0px;
+}
+
+#sidebar .sidebar-header {
+  padding: 2.5rem 2rem;
+  background: #2C303F;
+}
+
+#sidebar ul li a {
+  padding: 1rem;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 1em;
+  display: block;
+}
+
+#sidebar ul li a:hover {
+  color: #ffffff;
+  cursor: pointer !important;
+  background: #34394b;
 }
 /*# sourceMappingURL=style.css.map */

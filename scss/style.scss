@@ -47,6 +47,15 @@ button{
     }
 }
 
+a,
+a:hover,
+a:focus{
+	color: inherit;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+
 body {
     bottom: 0;
     padding: 0;
@@ -56,10 +65,11 @@ body {
     overflow-x: hidden;
 }
 
-// * Navbar - Start ?//
+// ? Navbar - Start ?//
 .navbar {
     background: $bg;
     transition: $trans;
+    z-index: 1;
     
     .navbar-brand {
         font-size: $fs-sm;
@@ -73,6 +83,10 @@ body {
         border: none;
         
         .navbar-toggler-icon{
+            @include md {
+
+                cursor: pointer !important;
+            }
             color: white;
         }
     }
@@ -101,7 +115,7 @@ body {
                 }
 
                 &:hover {
-                    opacity: 0.8;
+                    opacity: 0.7;
                 }
 
             }
@@ -115,7 +129,7 @@ body {
                 }
 
                 &:hover {
-                    opacity: 0.8;
+                    opacity: 0.7;
                 }
             }
 
@@ -127,7 +141,7 @@ body {
 }
 // * Navbar - End ?//
 
-// * Header - Start ? //
+// ? Header - Start ? //
 .header {
     padding: 10rem 0rem;
 
@@ -135,7 +149,7 @@ body {
         padding: 8rem 0.5rem 3rem 0.5rem;
     }
 
-    .container  {
+    .container-sm  {
         .row{
             display: flex;
             align-items: center;
@@ -146,13 +160,13 @@ body {
                     font-size: 2.7em; 
                     letter-spacing: -1px;
                      @include md {
-                        font-size: 3rem;
+                        font-size: 2.5rem;
                         line-height: 3rem;
                         letter-spacing: -0.5px;
                     }
                     @include sm {
-                        font-size: 2rem;
-                        line-height: 2rem;
+                        font-size: 2.3rem;
+                        line-height: 2.5rem;
                         letter-spacing: -0.5px;
                     }
                 }
@@ -169,6 +183,11 @@ body {
                 .desc{
                     font-size: 18px;
                     font-weight: 450;
+                     
+                    @include md{
+                        font-size: 16px;
+                    }
+                    
                 }
 
                 .ctas {
@@ -194,14 +213,10 @@ body {
                         .icon{
                            transition: $trans;
 
-                            @include md {
-                                display: none;
-                            }
-
                         }
 
                         &:hover {
-                            opacity: 0.8;
+                            box-shadow: 0px 0px 10px rgba(84, 54, 204, 0.4);
                         }
 
                         @include sm {
@@ -240,6 +255,10 @@ body {
                     font-size: $fs-lg;
                     font-weight: bold;
 
+                    @include md {
+                        font-size: 2.3rem;
+                    }
+
                     @include sm {
                         font-size: $fs-md;
                     }
@@ -264,7 +283,7 @@ body {
 }
 // * Header - End ? //
 
-//* Work - Start ? //
+// ? Work - Start ? //
 
 .work {
     background: $bg-secondary;    
@@ -272,5 +291,47 @@ body {
 
 }
 
-//* Work - End ? //
+// * Work - End ? //
+
+// ? Sidebar - Start ? //
+
+#sidebar{
+    z-index: 4;
+    min-width: 250px;
+    margin-left: -250px;
+    max-width: 250px;
+    height: 100%;
+    background: #2C303F;
+    color: #fff;
+    transition: all 0.3s;
+        
+
+
+   &.active {
+        margin-left: 0px;
+    }
+
+    .sidebar-header{
+        padding: 2.5rem 2rem;
+        background: #2C303F;
+        
+    }
+
+     ul li a{
+        padding: 1rem;
+        border-radius: 7px;
+        cursor: pointer;
+        font-size: 1em;
+        display: block;
+
+        &:hover{
+        color: #ffffff;    
+        cursor: pointer !important;
+        background: #34394b;
+      }
+    }
+     
+}
+
+// * Sidebar - End ? //
 

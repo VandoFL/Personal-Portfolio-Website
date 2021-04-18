@@ -9,16 +9,44 @@
     <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="scss/style.css">
+    
 </head>
 <body>
 
+<!--? Sidebar - Start ?-->
+<nav id="sidebar" class="fixed-top">
+ 	
+ 	 <div class="sidebar-header">
+ 	 	<h3>Vando FL</h3>
+ 	 </div>
+
+ 	 <ul class="list-unstyled components px-2">
+
+ 	 	 <li>
+ 	 		<a href="#" aria-expanded="false">Work</a>
+ 	 	</li>
+ 	 	 <li>
+ 	 		<a href="#" aria-expanded="false">Contacts</a>
+ 	 	</li>
+ 	 	 <li>
+ 	 		<a href="#" aria-expanded="false">Get CV</a>
+ 	 	</li>
+ 	 
+ 	 </ul>
+
+ </nav>
+    <!--? Sidebar - End ?-->
+
     <!--? Navbar - Start ?-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-4 ">
-    <div class="container">
+    <div class="container-sm">
         <a class="navbar-brand" href="#"><img class="logo" src="img/Logo.png" alt=""> Vando FL</a>
-        <button class="navbar-toggler bg-red me-0 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <button class="navbar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-        </button>
+        </button> -->
+        <button type="button" id="sidebarCollapse" class="navbar-toggler">
+				<span class="navbar-toggler-icon"></span>
+		</button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto"> 
                 <li class="nav-item">
@@ -38,15 +66,15 @@
 
     <!--? Hero Section - Start ?-->
     <section class="header">
-        <div class="container">
+        <div class="container-sm">
         <div class="row">
-            <div class="col-md text-white NameHead my-4 my-md-0">
+            <div class="col-md-6 text-white NameHead my-4 my-md-0">
                 <h2 class="title">Vando Fariand Lezarazy<span>.</span></h2>
             </div>
-            <div class="col-md text-white aboutMe mt-4 mt-md-0">
+            <div class="col-md-6 text-white aboutMe mt-4 mt-md-0">
                 <p class="mb-4 title">About Me</p>
                 <h3 class="mb-4">Remote UI/UX Designer and Developer from Indonesia</h3>
-                <p class="mb-4 desc">An intermediate UI/UX Designer and Front-end Developer with a burning passion to solve problems and improve on the way.</p>
+                <p class="mb-5 mb-md-4 desc">An intermediate UI/UX Designer and Front-end Developer with a burning passion to solve problems and improve on the way.</p>
                 <div class="ctas py-md-2">
                     <button href="#" class="ctaWork btn text-white me-3 col-12 col-sm-12  col-md-6 col-lg-5 col-xl-4 mb-3  mb-md-2  mb-lg-0"><span>See My Work <ion-icon name="arrow-round-down"  class="icon ms-2"></ion-icon></span></button>
                     <button href="#" class="ctaContact btn text-white col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4  mb-md-2 mb-lg-0">Contact Me</button>
@@ -62,7 +90,7 @@
     <section class="work">
         <div class="container">
         <div class="row">
-            <div class="col-md col-lg text-white heading">
+            <div class="col-md-6 col-lg text-white heading">
                 <h2>Vando Fariand Lezarazy</h2>
                 <p>Self-taught UI UX Designer and Front-End Developer from Indonesia</p>
                 <div class="ctas py-md-2">
@@ -70,7 +98,7 @@
                     <button href="#" class="ctaContact btn text-white">Get in touch</button>
                 </div>
             </div>
-            <div class="col-md col-lg text-white mb-0 mb-sm-4">
+            <div class="col-md-6 col-lg text-white mb-0 mb-sm-4">
                 <img src="img/FaceProfile.JPG" class="img-fluid ill" data-speed="5" alt="">
             </div>
          </div>
@@ -82,24 +110,20 @@
 
 
 
-    
+
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     
     <script type="text/javascript">
-          document.addEventListener("mousemove" , parallax);
-         
-        function parallax(e){
-            this.querySelectorAll('.ill').forEach(layer => {
-                const speed = layer.getAttribute('data-speed')
 
-                const x = (window.innerWidth - e.pageX*speed)/200
-                const y = (window.innerWidth - e.pageY*speed)/200
-
-                layer.style.transform = `translateX(${x}px) translateY(${y}px)` 
-            }); 
-        };
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
 
         new kursor({
              type:2,
