@@ -1,0 +1,276 @@
+$bg: #272A36;
+$bg-secondary: #222530;
+$primary: #5436CC;
+$txt-body: #646C77;
+$fs-sm:  16px;
+$fs-md: 2.5rem;
+$fs-lg: 4rem;
+$trans: 0.25s ease-in-out;
+$brdr:  1px solid #646C77;
+
+$sc-sm: 576px;
+$sc-md: 768px;
+$sc-lg: 992px;
+$sc-xl: 1200px;
+$sc-xxl: 1400px;
+
+@mixin sm {
+    @media (max-width: $sc-sm) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (max-width: $sc-md) {
+        @content;
+    }
+}
+
+*{
+    cursor: none !important;
+    @include md {
+        cursor: default !important;
+    }
+}
+
+button{
+    &:hover {
+        cursor: none !important;
+        @include md {
+            cursor: pointer !important; 
+        }
+    }
+    &:focus {
+        outline: none;
+
+        box-shadow: none !important;
+    }
+}
+
+body {
+    bottom: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    background: $bg;
+    overflow-x: hidden;
+}
+
+// * Navbar - Start ?//
+.navbar {
+    background: $bg;
+    transition: $trans;
+    
+    .navbar-brand {
+        font-size: $fs-sm;
+        .logo{
+            height: 2rem;
+            min-height: 2rem;
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+        
+        .navbar-toggler-icon{
+            color: white;
+        }
+    }
+
+    .navbar-nav {
+        @include sm {
+            height: 100vh;
+            padding: 2.5rem 0;
+        }
+ 
+        .nav-item{
+
+            @include sm {
+                margin: 0 auto;
+                padding: 1.5rem 0 1rem 0;
+            }
+            
+            .btn_cv{
+                border: $brdr;
+                font-size: $fs-sm;
+                border-radius: 10px;
+                transition: $trans;
+
+                @include sm {
+                    font-size: $fs-sm;
+                }
+
+                &:hover {
+                    opacity: 0.8;
+                }
+
+            }
+
+            .nav-link{
+                font-size: $fs-sm;
+                transition: $trans;
+
+                @include sm {
+                    font-size: 1.5rem;
+                }
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+
+            .actlink {
+                font-weight: 300;
+            }
+        }
+    }
+}
+// * Navbar - End ?//
+
+// * Header - Start ? //
+.header {
+    padding: 10rem 0rem;
+
+    @include md {
+        padding: 8rem 0.5rem 3rem 0.5rem;
+    }
+
+    .container  {
+        .row{
+            display: flex;
+            align-items: center;
+            
+            .aboutMe {
+ 
+                h3 {
+                    font-size: 2.7em; 
+                    letter-spacing: -1px;
+                     @include md {
+                        font-size: 3rem;
+                        line-height: 3rem;
+                        letter-spacing: -0.5px;
+                    }
+                    @include sm {
+                        font-size: 2rem;
+                        line-height: 2rem;
+                        letter-spacing: -0.5px;
+                    }
+                }
+
+                p{
+                    color: $txt-body;
+                }
+
+                .title {
+                    font-size: $fs-sm;
+                    font-weight: 450;
+                }
+
+                .desc{
+                    font-size: 18px;
+                    font-weight: 450;
+                }
+
+                .ctas {
+                    display: flex;
+                    @include md {
+                        flex-direction: column;
+                    }
+
+
+                    .ctaWork{
+                        background: $primary;
+                        padding: 0.75rem 1rem;
+                        border-radius: 10px;
+                        position: relative;
+                        transition: $trans;
+
+                        span{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        }
+
+                        .icon{
+                           transition: $trans;
+
+                            @include md {
+                                display: none;
+                            }
+
+                        }
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
+
+                        @include sm {
+                            padding: 1rem 2rem;
+                            font-size: 1rem;
+                        }
+
+                        @include md {                            
+                            justify-content: center;
+                        }
+
+       
+                    }
+                    
+                    .ctaContact {
+                        padding: 0.75rem;
+                        border-radius: 10px;
+                        border: $brdr;
+                        transition: $trans;
+
+                        &:hover {
+                            opacity: 0.7;
+                        }
+
+                         @include sm {
+                            padding: 1rem 2rem;
+                            font-size: 1rem;
+                        }
+                    }
+                }
+
+            }
+
+            .NameHead {
+                .title{
+                    font-size: $fs-lg;
+                    font-weight: bold;
+
+                    @include sm {
+                        font-size: $fs-md;
+                    }
+
+                    span{
+                        color: $primary;
+                    }
+
+                }
+            }
+
+            .col-12 {
+                position: relative;
+                
+                @include sm {
+                    padding: 0 1rem 2rem 1rem;
+                }
+            }
+        }
+    }
+
+}
+// * Header - End ? //
+
+//* Work - Start ? //
+
+.work {
+    background: $bg-secondary;    
+    padding: 10rem 0rem;
+
+}
+
+//* Work - End ? //
+

@@ -1,0 +1,280 @@
+* {
+  cursor: none !important;
+}
+
+@media (max-width: 768px) {
+  * {
+    cursor: default !important;
+  }
+}
+
+button:hover {
+  cursor: none !important;
+}
+
+@media (max-width: 768px) {
+  button:hover {
+    cursor: pointer !important;
+  }
+}
+
+button:focus {
+  outline: none;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+body {
+  bottom: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background: #272A36;
+  overflow-x: hidden;
+}
+
+.navbar {
+  background: #272A36;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.navbar .navbar-brand {
+  font-size: 16px;
+}
+
+.navbar .navbar-brand .logo {
+  height: 2rem;
+  min-height: 2rem;
+}
+
+.navbar .navbar-toggler {
+  border: none;
+}
+
+.navbar .navbar-toggler .navbar-toggler-icon {
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .navbar .navbar-nav {
+    height: 100vh;
+    padding: 2.5rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar .navbar-nav .nav-item {
+    margin: 0 auto;
+    padding: 1.5rem 0 1rem 0;
+  }
+}
+
+.navbar .navbar-nav .nav-item .btn_cv {
+  border: 1px solid #646C77;
+  font-size: 16px;
+  border-radius: 10px;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+@media (max-width: 576px) {
+  .navbar .navbar-nav .nav-item .btn_cv {
+    font-size: 16px;
+  }
+}
+
+.navbar .navbar-nav .nav-item .btn_cv:hover {
+  opacity: 0.8;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+  font-size: 16px;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+@media (max-width: 576px) {
+  .navbar .navbar-nav .nav-item .nav-link {
+    font-size: 1.5rem;
+  }
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+  opacity: 0.8;
+}
+
+.navbar .navbar-nav .nav-item .actlink {
+  font-weight: 300;
+}
+
+.header {
+  padding: 10rem 0rem;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 8rem 0.5rem 3rem 0.5rem;
+  }
+}
+
+.header .container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .container .row .aboutMe h3 {
+  font-size: 2.7em;
+  letter-spacing: -1px;
+}
+
+@media (max-width: 768px) {
+  .header .container .row .aboutMe h3 {
+    font-size: 3rem;
+    line-height: 3rem;
+    letter-spacing: -0.5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header .container .row .aboutMe h3 {
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: -0.5px;
+  }
+}
+
+.header .container .row .aboutMe p {
+  color: #646C77;
+}
+
+.header .container .row .aboutMe .title {
+  font-size: 16px;
+  font-weight: 450;
+}
+
+.header .container .row .aboutMe .desc {
+  font-size: 18px;
+  font-weight: 450;
+}
+
+.header .container .row .aboutMe .ctas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .header .container .row .aboutMe .ctas {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.header .container .row .aboutMe .ctas .ctaWork {
+  background: #5436CC;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  position: relative;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.header .container .row .aboutMe .ctas .ctaWork span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .container .row .aboutMe .ctas .ctaWork .icon {
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .header .container .row .aboutMe .ctas .ctaWork .icon {
+    display: none;
+  }
+}
+
+.header .container .row .aboutMe .ctas .ctaWork:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 576px) {
+  .header .container .row .aboutMe .ctas .ctaWork {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .container .row .aboutMe .ctas .ctaWork {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.header .container .row .aboutMe .ctas .ctaContact {
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #646C77;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.header .container .row .aboutMe .ctas .ctaContact:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 576px) {
+  .header .container .row .aboutMe .ctas .ctaContact {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+.header .container .row .NameHead .title {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .header .container .row .NameHead .title {
+    font-size: 2.5rem;
+  }
+}
+
+.header .container .row .NameHead .title span {
+  color: #5436CC;
+}
+
+.header .container .row .col-12 {
+  position: relative;
+}
+
+@media (max-width: 576px) {
+  .header .container .row .col-12 {
+    padding: 0 1rem 2rem 1rem;
+  }
+}
+
+.work {
+  background: #222530;
+  padding: 10rem 0rem;
+}
+/*# sourceMappingURL=style.css.map */
