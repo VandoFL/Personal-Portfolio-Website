@@ -26,12 +26,43 @@ $sc-xxl: 1400px;
     }
 }
 
+
+@mixin min-md {
+    @media (min-width: $sc-md) {
+        @content;
+    }
+}
+
+
+@mixin min-lg {
+    @media (min-width: $sc-lg) {
+        @content;
+    }
+}
+
+html{
+    scroll-behavior: smooth !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 *{
+    scroll-behavior: smooth !important;
     cursor: none !important;
     @include md {
         cursor: default !important;
     }
 }
+
+body {    
+    font-family: "Poppins", sans-serif;
+    background: $bg;
+    transition: $trans;
+    scroll-behavior: smooth !important;
+    overflow-x: hidden;
+}
+
 
 button{
     &:hover {
@@ -55,21 +86,11 @@ a:focus{
 	transition: all 0.3s;
 }
 
-
-body {
-    bottom: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    background: $bg;
-    overflow-x: hidden;
-}
-
 // ? Navbar - Start ?//
 .navbar {
     background: $bg;
     transition: $trans;
-    z-index: 1;
+    z-index: 10;
     
     .navbar-brand {
         font-size: $fs-sm;
@@ -143,13 +164,13 @@ body {
 
 // ? Header - Start ? //
 .header {
-    padding: 10rem 0rem;
+    padding: 10rem 1rem;
 
     @include md {
         padding: 8rem 0.5rem 3rem 0.5rem;
     }
 
-    .container-sm  {
+    .container-lg {
         .row{
             display: flex;
             align-items: center;
@@ -157,16 +178,16 @@ body {
             .aboutMe {
  
                 h3 {
-                    font-size: 2.7em; 
+                    font-size: 2.3em; 
                     letter-spacing: -1px;
                      @include md {
-                        font-size: 2.5rem;
+                        font-size: 2rem;
                         line-height: 3rem;
                         letter-spacing: -0.5px;
                     }
                     @include sm {
-                        font-size: 2.3rem;
-                        line-height: 2.5rem;
+                        font-size: 1.5em;
+                        line-height: 2rem;
                         letter-spacing: -0.5px;
                     }
                 }
@@ -176,12 +197,12 @@ body {
                 }
 
                 .title {
-                    font-size: $fs-sm;
+                    font-size: 13px;
                     font-weight: 450;
                 }
 
                 .desc{
-                    font-size: 18px;
+                    font-size: 16px;
                     font-weight: 450;
                      
                     @include md{
@@ -216,7 +237,7 @@ body {
                         }
 
                         &:hover {
-                            box-shadow: 0px 0px 10px rgba(84, 54, 204, 0.4);
+                            box-shadow: 0px 0px 15px rgba(84, 54, 204, 0.4);
                         }
 
                         @include sm {
@@ -252,15 +273,15 @@ body {
 
             .NameHead {
                 .title{
-                    font-size: $fs-lg;
+                    font-size: 3.8rem;
                     font-weight: bold;
 
-                    @include md {
-                        font-size: 2.3rem;
+                   @include md {
+                        font-size: 2.8rem;
                     }
 
                     @include sm {
-                        font-size: $fs-md;
+                        font-size: 2.7rem;
                     }
 
                     span{
@@ -285,9 +306,146 @@ body {
 
 // ? Work - Start ? //
 
-.work {
+#work {
     background: $bg-secondary;    
-    padding: 10rem 0rem;
+    padding: 10rem 1rem;
+
+    @include md {
+        padding: 5rem 1rem;
+    }
+
+    .title {
+         .gallery-title{
+        font-size: 3.8rem;
+        font-weight: bold;
+
+        @include md {
+            font-size: 2.8rem;
+        }
+
+        @include sm {
+            font-size: 2.7rem;
+        }
+
+        span{
+            color: $primary;
+        }
+
+    }
+
+    .sub {
+        color: $txt-body;        
+        font-weight: 450;
+    }
+    }
+
+    .filter-sort {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 0;
+        transition: $trans;
+
+        @include md {
+            position: sticky;
+            align-items: center;
+            top: 5rem;
+            left:0;
+            z-index: 3;
+            background: $bg-secondary;
+            padding: 1.5rem 0 0rem 0;
+            justify-content: center;
+        }
+
+
+        .filter-button {
+            color: white;
+            font-size: 18px;
+            margin: 1rem;
+            transition: $trans;
+            position: relative;         
+
+            @include md {
+                margin: 0 0.5rem;
+                font-size: 20px;
+            }
+
+            @include min-md {
+                    &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    width: 100%;
+                    height: 3px;
+                    background: $primary;
+                    opacity: 0;
+                    transition: $trans;
+                    border-radius: 10px;
+                }
+
+                &:hover:after {
+                    opacity: 1;
+                }
+            }
+
+        }
+    }
+    
+    .gallery_product{
+        position: relative;
+        transition: $trans;
+
+    
+
+        @include min-lg {
+              &:hover:before {
+            opacity: 0.7;
+            }
+            &:hover:after {
+                opacity: 1;
+                transform:  translateY(0px);
+            }
+        }      
+
+        &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 1;
+            transition: $trans;
+            background: $primary;
+            pointer-events: none;
+        }
+        
+        &:after {
+            content: "See Case Study";
+            position: absolute;
+            display: block;
+            bottom: 10%;
+            left: 40%;
+            transform: translateY(20px);
+            font-size: 1.7em;
+            z-index: 2;
+            color: white;            
+            transition: $trans;
+            font-weight: 450;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+       img {
+           width: 100%;
+           z-index: 1;
+           height: auto;
+
+       }
+    }
 
 }
 
@@ -305,6 +463,9 @@ body {
     color: #fff;
     transition: all 0.3s;
         
+    @include min-lg {
+        display: none;
+    }
 
 
    &.active {
@@ -335,3 +496,7 @@ body {
 
 // * Sidebar - End ? //
 
+
+// ? Contacts - Start ? //
+
+// * Contacts - End ? //

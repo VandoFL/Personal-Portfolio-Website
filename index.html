@@ -23,10 +23,10 @@
  	 <ul class="list-unstyled components px-2">
 
  	 	 <li>
- 	 		<a href="#" aria-expanded="false">Work</a>
+ 	 		<a href="#work" aria-expanded="false">Work</a>
  	 	</li>
  	 	 <li>
- 	 		<a href="#" aria-expanded="false">Contacts</a>
+ 	 		<a href="#contacts" aria-expanded="false">Contacts</a>
  	 	</li>
  	 	 <li>
  	 		<a href="#" aria-expanded="false">Get CV</a>
@@ -39,21 +39,19 @@
 
     <!--? Navbar - Start ?-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-4 ">
-    <div class="container-sm">
+    <div class="container-lg">
         <a class="navbar-brand" href="#"><img class="logo" src="img/Logo.png" alt=""> Vando FL</a>
-        <!-- <button class="navbar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button> -->
+     
         <button type="button" id="sidebarCollapse" class="navbar-toggler">
 				<span class="navbar-toggler-icon"></span>
 		</button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto"> 
                 <li class="nav-item">
-                <a class="nav-link actlink text-white ms-0 ms-md-4" href="#">Work</a>
+                <a class="nav-link actlink text-white ms-0 ms-md-4" href="#work">Work</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link actlink text-white ms-0 ms-md-4" href="#">Contacts</a>
+                <a class="nav-link actlink text-white ms-0 ms-md-4" href="#contacts">Contacts</a>
                 </li>
                 <li class="nav-item">
                 <button class="nav-link btn btn_cv text-white ms-0 ms-md-4 px-3 py-2">Get CV</button>
@@ -64,49 +62,83 @@
     </nav>
     <!--? Navbar - End ?-->
 
-    <!--? Hero Section - Start ?-->
+    <!--? Header Section - Start ?-->
     <section class="header">
-        <div class="container-sm">
+        <div class="container-lg">
         <div class="row">
-            <div class="col-md-6 text-white NameHead my-4 my-md-0">
+            <div class="col-md-6 text-white NameHead my-3 my-md-0">
                 <h2 class="title">Vando Fariand Lezarazy<span>.</span></h2>
             </div>
             <div class="col-md-6 text-white aboutMe mt-4 mt-md-0">
-                <p class="mb-4 title">About Me</p>
-                <h3 class="mb-4">Remote UI/UX Designer and Developer from Indonesia</h3>
-                <p class="mb-5 mb-md-4 desc">An intermediate UI/UX Designer and Front-end Developer with a burning passion to solve problems and improve on the way.</p>
+                <p class="mb-2 mb-md-3  title">About Me</p>
+                <h3 class="mb-3 mb-md-4">Remote UI/UX Designer and Developer from Indonesia</h3>
+                <p class="mb-4 mb-md-4 desc">An intermediate UI/UX Designer and Front-end Developer with a burning passion to solve problems and improve on the way.</p>
                 <div class="ctas py-md-2">
-                    <button href="#" class="ctaWork btn text-white me-3 col-12 col-sm-12  col-md-6 col-lg-5 col-xl-4 mb-3  mb-md-2  mb-lg-0"><span>See My Work <ion-icon name="arrow-round-down"  class="icon ms-2"></ion-icon></span></button>
-                    <button href="#" class="ctaContact btn text-white col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4  mb-md-2 mb-lg-0">Contact Me</button>
-                    <button href="#" class="unactivebtn btn col-12 col-sm-12 col-lg-2" disabled></button>
+                    <a href="#work" class="ctaWork btn text-white me-3 col-12 col-sm-12  col-md-6 col-lg-5 col-xl-4 mb-3  mb-md-2  mb-lg-0"><span>See My Work <ion-icon name="arrow-round-down"  class="icon ms-2"></ion-icon></span></a>
+                    <a href="#contacts" class="ctaContact btn text-white col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4  mb-md-2 mb-lg-0">Contact Me</a>
+                    <a href="#" class="unactivebtn btn col-12 col-sm-12 col-lg-2" disabled></a>
                 </div>
             </div>
          </div>
         </div>
     </section>
-    <!--? Hero Section - End ?-->
+    <!--? Header Section - End ?-->
 
-    <!--? About Section - Start ?-->
-    <section class="work">
-        <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-lg text-white heading">
-                <h2>Vando Fariand Lezarazy</h2>
-                <p>Self-taught UI UX Designer and Front-End Developer from Indonesia</p>
-                <div class="ctas py-md-2">
-                    <button href="#" class="ctaWork btn text-white me-2">See My Work <ion-icon name="arrow-round-down"  class="icon ms-2"></ion-icon></button>
-                    <button href="#" class="ctaContact btn text-white">Get in touch</button>
-                </div>
+    <!--? Work Section - Start ?-->
+    <section id="work">
+        <div class="container-lg text-white">
+            <div class="row">
+
+            <div class="title col-md-6 pb-0 pb-md-5">
+                <h2 class="gallery-title">My Work<span>.</span></h2>
+                <p class="sub py-2">Projects that i've made</p>
             </div>
-            <div class="col-md-6 col-lg text-white mb-0 mb-sm-4">
-                <img src="img/FaceProfile.JPG" class="img-fluid ill" data-speed="5" alt="">
+
+            <div class="filter-sort col-md-6 pb-3 pb-md-5">
+                <button class="btn btn-default filter-button" data-filter="all">All</button>
+                <button class="btn btn-default filter-button" data-filter="uiux">UI/UX</button>
+                <button class="btn btn-default filter-button" data-filter="brand">Branding</button>
+                <button class="btn btn-default filter-button" data-filter="dev">Development</button>
             </div>
-         </div>
+            
+                   <div class="gallery_product col-md-4 filter center uiux my-2">
+                       <a href="#"><img src="img/UiUx1.png" alt="" class="image-fluid"></a>
+                   </div>
+                   <div class="gallery_product col-md-4 filter center uiux my-2">
+                       <a href="#"><img src="img/UiUx2.png" alt="" class="image-fluid"></a>
+                   </div>
+                   <div class="gallery_product col-md-4 filter center uiux my-2">
+                       <a href="#"><img src="img/UiUx3.png" alt="" class="image-fluid"></a>
+                   </div>
+                   <div class="gallery_product col-md-4 filter center brand my-2">
+                       <a href="#"><img src="img/UiUx4.png" alt="" class="image-fluid"></a>
+                   </div>
+                   <div class="gallery_product col-md-4 filter center dev my-2">
+                       <a href="#"><img src="img/UiUx4.png" alt="" class="image-fluid"></a>
+                   </div>
+              
+            </div>                   
+             
+
         </div>
     </section>
-    <!--? About Section - End ?-->
+    <!--? Work Section - End ?-->
+    
+    <!--? Contacts Section - Start ?-->
 
+    <section id="contacts">
+        <div class="container-lg text-white">
+            <div class="row">
 
+            <div class="title col-md-6 pb-0 pb-md-5">
+                <h2 class="gallery-title">Contacts<span>.</span></h2>
+                <p class="sub py-2">All my projects into one</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!--? Contacts Section - End ?-->
 
 
 
@@ -116,21 +148,9 @@
     <script src="js/jquery-3.3.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="custom/gallery-sorting.js"></script>
+    <script src="custom/custom-cursor.js"></script>
+    <script src="custom/sidebar.js"></script>
     
-    <script type="text/javascript">
-
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
-        });
-
-        new kursor({
-             type:2,
-             removeDefaultCursor: true,
-             color: "#fff",
-        })
-
-    </script>
 </body>
 </html>
