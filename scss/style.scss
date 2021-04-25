@@ -86,6 +86,30 @@ a:focus{
 	transition: all 0.3s;
 }
 
+ .title_ {
+        font-size: 3.8rem;
+        font-weight: bold;
+
+        @include md {
+            font-size: 2.8rem;
+        }
+
+        @include sm {
+            font-size: 2.7rem;
+        }
+
+        span{
+            color: $primary;
+        }    
+
+    }
+
+.sub_ {
+    color: $txt-body;
+    font-size: $fs-sm;
+}
+    
+
 // ? Navbar - Start ?//
 .navbar {
     background: $bg;
@@ -170,7 +194,7 @@ a:focus{
         padding: 8rem 0.5rem 3rem 0.5rem;
     }
 
-    .container-lg {
+    .container-md {
         .row{
             display: flex;
             align-items: center;
@@ -271,26 +295,6 @@ a:focus{
 
             }
 
-            .NameHead {
-                .title{
-                    font-size: 3.8rem;
-                    font-weight: bold;
-
-                   @include md {
-                        font-size: 2.8rem;
-                    }
-
-                    @include sm {
-                        font-size: 2.7rem;
-                    }
-
-                    span{
-                        color: $primary;
-                    }
-
-                }
-            }
-
             .col-12 {
                 position: relative;
                 
@@ -308,35 +312,15 @@ a:focus{
 
 #work {
     background: $bg-secondary;    
-    padding: 10rem 1rem;
+    padding: 10rem 0rem;
 
     @include md {
         padding: 5rem 1rem;
     }
 
-    .title {
-         .gallery-title{
-        font-size: 3.8rem;
-        font-weight: bold;
-
-        @include md {
-            font-size: 2.8rem;
-        }
-
-        @include sm {
-            font-size: 2.7rem;
-        }
-
-        span{
-            color: $primary;
-        }
-
-    }
-
     .sub {
         color: $txt-body;        
         font-weight: 450;
-    }
     }
 
     .filter-sort {
@@ -393,10 +377,12 @@ a:focus{
     }
     
     .gallery_product{
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
         position: relative;
-        transition: $trans;
-
-    
+        transition: $trans;   
 
         @include min-lg {
               &:hover:before {
@@ -424,11 +410,11 @@ a:focus{
         }
         
         &:after {
-            content: "See Case Study";
+            content: "Read More";
             position: absolute;
             display: block;
             bottom: 10%;
-            left: 40%;
+            left: 50%;
             transform: translateY(20px);
             font-size: 1.7em;
             z-index: 2;
@@ -443,7 +429,9 @@ a:focus{
            width: 100%;
            z-index: 1;
            height: auto;
-
+           background-size: cover;
+           background-position: center;
+           background-repeat: no-repeat;
        }
     }
 
@@ -498,5 +486,36 @@ a:focus{
 
 
 // ? Contacts - Start ? //
+
+#contacts {
+  padding: 10rem 1rem;
+
+  form {
+      padding: 2rem;
+      border-radius: 10px;
+      background: $bg-secondary;
+
+        label {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        input, textarea {
+            background: $bg;
+            border: none;
+        }
+
+        textarea {
+            min-height: 5rem;
+            max-height: 10rem;
+        }
+
+        .sub-btn {
+            background: $primary;
+            color: white;
+        }
+
+  }
+}
 
 // * Contacts - End ? //
