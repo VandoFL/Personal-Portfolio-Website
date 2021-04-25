@@ -89,8 +89,7 @@ a:focus {
 }
 
 .navbar .navbar-brand .logo {
-  height: 2rem;
-  min-height: 2rem;
+  height: 1.25rem;
 }
 
 .navbar .navbar-toggler {
