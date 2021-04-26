@@ -355,7 +355,6 @@ a:focus {
             align-items: center;
     top: 5rem;
     left: 0;
-    font-size: 0.5rem;
     z-index: 3;
     background: #222530;
     padding: 1.5rem 0 0rem 0;
@@ -377,7 +376,7 @@ a:focus {
 @media (max-width: 768px) {
   #work .filter-sort .filter-button {
     margin: 0 0.5rem;
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 

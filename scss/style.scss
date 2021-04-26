@@ -344,7 +344,6 @@ a:focus{
             align-items: center;
             top: 5rem;
             left:0;
-            font-size: 0.5rem;
             z-index: 3;
             background: $bg-secondary;
             padding: 1.5rem 0 0rem 0;
@@ -361,7 +360,7 @@ a:focus{
 
             @include md {
                 margin: 0 0.5rem;
-                font-size: 20px;
+                font-size: 15px;
             }
 
             @include min-md {
