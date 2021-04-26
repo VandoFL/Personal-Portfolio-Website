@@ -346,21 +346,20 @@ a:focus{
             left:0;
             z-index: 3;
             background: $bg-secondary;
-            padding: 1.5rem 0 0rem 0;
+            padding: 1rem 0 0rem 0;
             justify-content: center;
         }
 
 
         .filter-button {
             color: white;
-            font-size: 18px;
+            font-size: 15px;
             margin: 1rem;
             transition: $trans;
             position: relative;         
 
             @include md {
                 margin: 0 0.5rem;
-                font-size: 15px;
             }
 
             @include min-md {

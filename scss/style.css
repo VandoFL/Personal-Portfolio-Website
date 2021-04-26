@@ -357,7 +357,7 @@ a:focus {
     left: 0;
     z-index: 3;
     background: #222530;
-    padding: 1.5rem 0 0rem 0;
+    padding: 1rem 0 0rem 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -366,7 +366,7 @@ a:focus {
 
 #work .filter-sort .filter-button {
   color: white;
-  font-size: 18px;
+  font-size: 15px;
   margin: 1rem;
   -webkit-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
@@ -376,7 +376,6 @@ a:focus {
 @media (max-width: 768px) {
   #work .filter-sort .filter-button {
     margin: 0 0.5rem;
-    font-size: 15px;
   }
 }
 
