@@ -115,6 +115,10 @@ a:focus{
     background: $bg;
     transition: $trans;
     z-index: 10;
+
+    @include sm {
+        padding: 0 0.5rem;
+    }
     
     .navbar-brand {
         font-size: $fs-sm;
@@ -125,10 +129,10 @@ a:focus{
 
     .navbar-toggler {
         border: none;
+        padding: 0;
         
         .navbar-toggler-icon{
             @include md {
-
                 cursor: pointer !important;
             }
             color: white;
@@ -190,7 +194,7 @@ a:focus{
     padding: 10rem 1rem;
 
     @include md {
-        padding: 8rem 0.5rem 3rem 0.5rem;
+        padding: 8rem 1rem 3rem 1rem;
     }
 
     .container-md {
@@ -314,7 +318,7 @@ a:focus{
     padding: 10rem 0rem;
 
     @include md {
-        padding: 5rem 1rem;
+        padding: 5rem 0.7rem;
     }
 
     .sub {
@@ -487,12 +491,22 @@ a:focus{
 // ? Contacts - Start ? //
 
 #contacts {
-  padding: 10rem 1rem;
+  padding: 10rem 0.7rem;
+
+   @include sm {
+        padding: 7rem 0.7rem 3rem 0.7rem;
+    }
+    
 
   form {
-      padding: 2rem;
+      padding: 2rem 2rem 1rem 2rem;
       border-radius: 10px;
-      background: $bg-secondary;
+      background: #2C303E;
+
+      @include sm {
+          padding: 1rem;
+          margin: 1rem 0;
+      }
 
         label {
             color: white;
@@ -500,7 +514,8 @@ a:focus{
         }
 
         input, textarea {
-            background: $bg;
+            background: #303444;
+            color: white;
             border: none;
         }
 
@@ -511,6 +526,9 @@ a:focus{
 
         .sub-btn {
             background: $primary;
+            display: block;
+            margin: 2rem 0;
+            width: 100%;
             color: white;
         }
 

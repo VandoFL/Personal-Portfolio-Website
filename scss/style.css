@@ -84,6 +84,12 @@ a:focus {
   z-index: 10;
 }
 
+@media (max-width: 576px) {
+  .navbar {
+    padding: 0 0.5rem;
+  }
+}
+
 .navbar .navbar-brand {
   font-size: 16px;
 }
@@ -94,6 +100,7 @@ a:focus {
 
 .navbar .navbar-toggler {
   border: none;
+  padding: 0;
 }
 
 .navbar .navbar-toggler .navbar-toggler-icon {
@@ -164,7 +171,7 @@ a:focus {
 
 @media (max-width: 768px) {
   .header {
-    padding: 8rem 0.5rem 3rem 0.5rem;
+    padding: 8rem 1rem 3rem 1rem;
   }
 }
 
@@ -315,7 +322,7 @@ a:focus {
 
 @media (max-width: 768px) {
   #work {
-    padding: 5rem 1rem;
+    padding: 5rem 0.7rem;
   }
 }
 
@@ -502,13 +509,26 @@ a:focus {
 }
 
 #contacts {
-  padding: 10rem 1rem;
+  padding: 10rem 0.7rem;
+}
+
+@media (max-width: 576px) {
+  #contacts {
+    padding: 7rem 0.7rem 3rem 0.7rem;
+  }
 }
 
 #contacts form {
-  padding: 2rem;
+  padding: 2rem 2rem 1rem 2rem;
   border-radius: 10px;
-  background: #222530;
+  background: #2C303E;
+}
+
+@media (max-width: 576px) {
+  #contacts form {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
 }
 
 #contacts form label {
@@ -517,7 +537,8 @@ a:focus {
 }
 
 #contacts form input, #contacts form textarea {
-  background: #272A36;
+  background: #303444;
+  color: white;
   border: none;
 }
 
@@ -528,6 +549,9 @@ a:focus {
 
 #contacts form .sub-btn {
   background: #607AD6;
+  display: block;
+  margin: 2rem 0;
+  width: 100%;
   color: white;
 }
 /*# sourceMappingURL=style.css.map */
