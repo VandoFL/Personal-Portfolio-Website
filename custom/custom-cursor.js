@@ -1,5 +1,5 @@
     new kursor({
-             type:1,
+             type:0,
             
              color: "#fff",
         })
